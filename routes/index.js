@@ -32,7 +32,7 @@ router.post('/login', (req, res) => {
         mes: 'success',
         data: {
           token: jwt.sign({name: userName}, 'abcd', {
-            expiresIn: 60
+            expiresIn: 60 * 60 * 24
           })
         }
       })
